@@ -20,7 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-command -v fzf > /dev/null 2>&1 or return
+command -sq fzf; or exit
 
 if test -z "$FZF_MARKS_FILE"
     set FZF_MARKS_FILE "$HOME/.fzf-marks"
